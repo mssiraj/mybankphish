@@ -35,7 +35,7 @@
 
     <div id="header">
 		<div id="myHead">
-        <p style="font-family: Garamond, serif;   font-size: 150%; font-weight: bold;"> Bank of S&R Kawokudi</p>
+        <p style="font-family: Garamond, serif;   font-size: 150%; font-weight: bold;"> Bank of S&R</p>
 		</div>
 		<form name="frmlang" method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
 			
