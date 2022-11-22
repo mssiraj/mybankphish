@@ -1,6 +1,7 @@
-AuthUserFile "/var/www/mypass/.htpasswd"
-AuthName "You must login with the credentials"
-AuthType Basic
-Allow from all
-Require valid-user
-Options +Indexes
+<Directory "/var/www/html/home">
+    Options Indexes Multiviews FollowSymLinks
+    AuthType Digest
+    AuthName "staff"
+    AuthUserFile /var/www/mypass/.htpasswd
+    Require valid-user
+</Directory>

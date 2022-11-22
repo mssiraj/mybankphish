@@ -1,0 +1,6 @@
+AuthUserFile "/var/www/mypass/.htpasswd"
+AuthName "You must login with the credentials"
+AuthType Basic
+Allow from all
+Require valid-user
+Options +Indexes
