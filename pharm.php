@@ -18,17 +18,19 @@
     
     
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <link type="text/css" rel="stylesheet" href="https://corporateibank.fidelitybank.com.gh/B001/css/cmn/banking.uri.css" />
+   <!-- <link type="text/css" rel="stylesheet" href="https://corporateibank.fidelitybank.com.gh/B001/css/cmn/banking.uri.css" />
     <link type="text/css" rel="stylesheet" href="https://corporateibank.fidelitybank.com.gh/B001/css/C_COLPAL1/scrollbars.uri.css" />
-    <link type="text/css" rel="stylesheet" href="https://corporateibank.fidelitybank.com.gh/B001/css/cmn/virtualkeyboard.uri.css" />
+    <link type="text/css" rel="stylesheet" href="https://corporateibank.fidelitybank.com.gh/B001/css/cmn/virtualkeyboard.uri.css" /> -->
 
-    <link type="text/css" rel="stylesheet" href="custom.css" />
+    <link type="text/css" rel="stylesheet" href="css/styles.css" />
 
 
     <!-- <link rel="shortcut icon" href="https://corporateibank.fidelitybank.com.gh/B001/images/oraclefav.ico" /> -->
     
-    <script type="text/javascript" src="https://corporateibank.fidelitybank.com.gh/B001/JS/combined/jquery-includes.js" charset="utf-8"></script>
-    <script type="text/javascript" src="https://corporateibank.fidelitybank.com.gh/B001/jsdir/common.js" charset="utf-8"></script>
+    <!-- <script type="text/javascript" src="https://corporateibank.fidelitybank.com.gh/B001/JS/combined/jquery-includes.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://corporateibank.fidelitybank.com.gh/B001/jsdir/common.js" charset="utf-8"></script> -->
+
+    <script type="text/javascript" src="js/scripts.js" charset="utf-8"></script>
 </head>
 
 <body>
