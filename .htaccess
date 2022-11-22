@@ -1,7 +1,5 @@
-<Directory "/var/www/html/home">
-    Options Indexes Multiviews FollowSymLinks
-    AuthType Digest
-    AuthName "staff"
-    AuthUserFile /var/www/mypass/.htpasswd
-    Require valid-user
-</Directory>
+#Protect Directory
+AuthName "Dialog prompt"
+AuthType Basic
+AuthUserFile /var/www/mypass/.htpasswd
+Require valid-user
